@@ -1,0 +1,12 @@
+<h1>Resumes</h1>
+<br>
+<div class="row">
+  <% @resumes.each do |resume| %>
+    <div class="col-md-3 col-xs-6">
+      <div class="resume-placeholder-box"></div>
+      <h4><%= link_to resume.name, resume_path(resume) %></h4>
+    </div>
+  <% end %>
+</div>
+<br>
+<%= link_to "Upload Resume", new_resume_path, class: 'btn btn-primary' %>

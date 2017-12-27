@@ -1,0 +1,26 @@
+// Place all the styles related to the Resumes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.resume-placeholder-box {
+  height: 200px;
+  width: 150px;
+  background-color: rgb(25, 123, 181);
+}
+
+p {
+  font-size: 12px;
+}
+
+.resume-placeholder-box-large {
+  height: 600px;
+  width: 450px;
+  background-color: rgb(25, 123, 181);
+}
+
+@media (max-width: 375px) {
+  .resume-placeholder-box {
+    height: 155px;
+    width: 155px;
+  }
+}
