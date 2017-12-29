@@ -1,9 +1,10 @@
 <h1>Edit Resume</h1>
 <div class="row">
-  <%= form_for @resume do |f| %>
+  <%= form_for @resume, html: { multipart: true } do |f| %>
     <div class="form-group col-md-7">
       <%= f.text_field :name, class: 'form-control', placeholder: "Enter a name for your resume" %>
     </div>
+    <%= f.file_field :document %>
     <div class="form-group col-md-1">
       <%= f.submit "Save", class: 'btn btn-primary' %>
     </div>

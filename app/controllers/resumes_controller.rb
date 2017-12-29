@@ -34,7 +34,7 @@ class ResumesController < ApplicationController
       flash[:notice] = "Your resume was successfully updated."
       redirect_to @resume
     else
-      flash.now[:alert] = "There was an error updating your resume. Please try again."
+      flash.now[:alert] = "#{@resume.errors.full_messages}"
       render :edit
     end
   end
@@ -51,7 +51,7 @@ class ResumesController < ApplicationController
 
   private
   def resume_params
-    params.require(:resume).permit(:name)
+    params.require(:resume).permit(:name, :document)
   end
 
   def set_resume

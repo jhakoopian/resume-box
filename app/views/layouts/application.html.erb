@@ -12,6 +12,7 @@
 
     <ul class="nav nav-tabs">
       <% if user_signed_in? %>
+        <li><%= link_to 'Resumes', resumes_path %></li>
         <li class="dropdown pull-right">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#">Signed in as: <strong><%= current_user.email %></strong>
           <span class="caret"></span></a>

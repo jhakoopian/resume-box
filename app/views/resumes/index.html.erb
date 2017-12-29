@@ -1,12 +1,24 @@
 <h1>Resumes</h1>
 <br>
-<div class="row">
-  <% @resumes.each do |resume| %>
-    <div class="col-md-3 col-xs-6">
-      <div class="resume-placeholder-box"></div>
-      <h4><%= link_to resume.name, resume_path(resume) %></h4>
+<% @resumes.each do |resume| %>
+  <div class="row">
+    <div class="col-md-2 col-xs-6">
+      <p><%= link_to resume.name, "#{resume.document}", target: ':_blank' %></p>
     </div>
-  <% end %>
-</div>
+    <div class="col-md-3 col-xs-6">
+      <p><%= resume.document_file_name %></p>
+    </div>
+    <div class="col-md-1 col-xs-6">
+      <p><%= resume.document_file_size %></p>
+    </div>
+    <div class="col-md-2 col-xs-6">
+      <% if resume.updated_at > Time.now.beginning_of_day %>
+        <p><%= "#{time_ago_in_words(resume.updated_at)} ago" %></p>
+      <% else %>
+        <p><%= "On #{resume.updated_at.strftime("%b %d, %Y")}" %></p>
+      <% end %>
+    </div>
+  </div>
+<% end %>
 <br>
 <%= link_to "Upload Resume", new_resume_path, class: 'btn btn-primary' %>

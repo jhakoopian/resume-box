@@ -1,9 +1,9 @@
 <h1><%= @resume.name %></h1>
 <br>
 <% if @resume.created_at > Time.now.beginning_of_day %>
-  <p><strong>Created at: </strong><%= "#{time_ago_in_words(@resume.created_at)} ago" %></p>
+  <p><strong>Uploaded: </strong><%= "#{time_ago_in_words(@resume.created_at)} ago" %></p>
 <% else %>
-  <p><strong>Created at: </strong><%= "#{@resume.created_at.strftime("%b %d, %Y")} ago" %></p>
+  <p><strong>Uploaded on: </strong><%= "#{@resume.created_at.strftime("%b %d, %Y")}" %></p>
 <% end %>
 <p><strong>Size: </strong>100kb</p>
 <div class="resume-placeholder-box-large"></div>
