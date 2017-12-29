@@ -8,10 +8,6 @@
   background-color: rgb(25, 123, 181);
 }
 
-p {
-  font-size: 12px;
-}
-
 .resume-placeholder-box-large {
   height: 600px;
   width: 450px;
@@ -23,4 +19,35 @@ p {
     height: 155px;
     width: 155px;
   }
+}
+
+.button {
+  width: 50px;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 20px;
+  background-color: white;
+  float: left;
+  margin-left: 10px;
+  cursor: pointer;
+  color: rgb(25, 123, 181);
+  border: 2px solid rgb(25, 123, 181);
+  transition: .2s;
+}
+
+.delete {
+  color: rgb(223, 111, 146);
+  border-color: rgb(223, 111, 146);
+}
+
+.button:hover {
+  background-color: rgb(25, 123, 181);
+  color: white;
+  text-decoration: none;
+}
+
+.delete:hover {
+  background-color: rgb(223, 111, 146);
+  color: white;
 }

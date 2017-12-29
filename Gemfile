@@ -29,3 +29,5 @@ gem 'turbolinks'
 gem 'bootstrap-sass'
 gem 'devise'
 gem "paperclip", "~> 5.0.0"
+gem "aws-sdk"
+gem "figaro"
