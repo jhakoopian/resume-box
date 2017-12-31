@@ -1,0 +1,20 @@
+<br>
+<div class="container">
+  <div class="row">
+    <h4 class="field-name">Resume Name</h4>
+  </div>
+  <%= form_for(@resume, multipart: true) do |f| %>
+    <div class="row">
+      <%= f.text_field :name, class: 'col-md-4 col-xs-12', placeholder: "Enter a name for your resume" %>
+    </div>
+    <br>
+    <div class="row">
+      <%= f.file_field :document %>
+    </div>
+    <br>
+    <div class="row">
+      <%= f.submit "Save", class: 'button save' %>
+      <%= link_to 'Back', resumes_path, class: 'button delete' %>
+    </div>
+<% end %>
+</div>

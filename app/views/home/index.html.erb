@@ -13,7 +13,5 @@
   <h1 class="heading">Share</br>Your Resume</h1>
   <p class="description">And personalize your approach with a tailored message</p>
   <p class="description quote">"I thought you might like to see my resume!"</p>
-  <%= link_to new_user_registration_path do %>
-    <div class='sign-up-today'>Sign Up Today!</div>
-  <% end %>
+  <%= link_to "Sign Up Today!", new_user_registration_path, class: 'btn btn-success btn-lg custom' %>
 </div>

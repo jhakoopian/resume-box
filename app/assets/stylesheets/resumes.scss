@@ -2,25 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.resume-placeholder-box {
-  height: 200px;
-  width: 150px;
-  background-color: rgb(25, 123, 181);
-}
-
-.resume-placeholder-box-large {
-  height: 600px;
-  width: 450px;
-  background-color: rgb(25, 123, 181);
-}
-
-@media (max-width: 375px) {
-  .resume-placeholder-box {
-    height: 155px;
-    width: 155px;
-  }
-}
-
 .button {
   width: 50px;
   font-size: 12px;
@@ -29,7 +10,7 @@
   border-radius: 20px;
   background-color: white;
   float: left;
-  margin-left: 10px;
+  margin: 5px 5px 0px 0px;
   cursor: pointer;
   color: rgb(25, 123, 181);
   border: 2px solid rgb(25, 123, 181);
@@ -50,4 +31,13 @@
 .delete:hover {
   background-color: rgb(223, 111, 146);
   color: white;
+}
+
+.save {
+  height: 22px;
+}
+
+.large {
+  width: 115px;
+  margin-top: 2px;
 }
