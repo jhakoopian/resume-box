@@ -1,2 +1,19 @@
-<h1>Resume Box</h1>
-<p>A web app for storing and sharing resumes with friends, clients, and potential employers.</p>
+<div class="content-div title">
+  <h1 class="heading heading-text">Resume Box</h1>
+  <p class="description">A web app for managing versions of your resume and sharing them with others</p>
+  <%= image_tag("resumes-graphic.png", class: "resumes-graphic") %>
+</div>
+<div class="content-div manage">
+  <h1 class="heading">Manage Multiple</br>Resume Versions</h1>
+  <p class="description">Back-end Developer Resume &#10003;</p>
+  <p class="description">Rails Developer Resume &#10003;</p>
+  <%= image_tag("mail-graphic.png", class: "mail-graphic") %>
+</div>
+<div class="content-div share">
+  <h1 class="heading">Share</br>Your Resume</h1>
+  <p class="description">And personalize your approach with a tailored message</p>
+  <p class="description quote">"I thought you might like to see my resume!"</p>
+  <%= link_to new_user_registration_path do %>
+    <div class='sign-up-today'>Sign Up Today!</div>
+  <% end %>
+</div>

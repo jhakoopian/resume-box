@@ -1,3 +1,115 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.content-div {
+  height: 800px;
+  padding: 225px 0px 0px 200px;
+  text-shadow: 2px 2px 8px black;
+}
+
+.heading {
+  font-size: 85px;
+}
+
+.description {
+  font-size: 24px;
+  margin-top: 25px;
+  width: 600px;
+}
+
+.title {
+  background-color: rgb(0, 192, 130);
+  color: white;
+}
+
+.title .heading {
+  font-size: 100px;
+}
+
+.title .description {
+  margin-bottom: 25px;
+}
+
+.resumes-graphic {
+  width: 600px;
+}
+
+.manage {
+  text-shadow: 2px 2px 6px rgb(100, 100, 100);
+}
+
+.manage .heading {
+  padding-top: 100px;
+}
+
+.mail-graphic {
+  margin-left: 150px;
+  width: 550px;
+}
+
+.share {
+  color: rgb(240, 240, 240);
+  background-color: rgb(114, 67, 232);
+  height: 1025px;
+}
+
+.share .heading {
+  margin-top: 125px;
+  margin-bottom: 25px;
+}
+
+.quote {
+  padding-left: 25px;
+}
+
+.sign-up-today {
+  background-color: rgb(0, 192, 130);
+  border: 3px solid rgb(0, 192, 130);
+  border-radius: 50px;
+  box-shadow: 2px 2px 2px black;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 20px;
+  height: 90px;
+  margin-top: 75px;
+  padding-top: 25px;
+  text-align: center;
+  text-decoration: none;
+  transition: .2s;
+  width: 200px;
+}
+
+a {
+  text-decoration: none;
+}
+
+@media (max-width: 375px) {
+  .content-div {
+    height: 550px;
+    padding: 100px 0px 0px 50px;
+  }
+  .content-div .heading { font-size: 60px; }
+  .description {
+    font-size: 20px;
+    width: 300px;
+    margin-bottom: 0px;
+  }
+  .content-div .share { height: 550px; }
+  .manage .heading {
+    font-size: 30px;
+    padding-top: 50px;
+    margin-bottom: 15px;
+  }
+  .content-div .resumes-graphic { width: 300px; }
+  .content-div .mail-graphic {
+    margin: 30px 0px 0px 40px;
+    width: 275px;
+  }
+  .share .heading {
+    font-size: 30px;
+    margin-top: 0px;
+  }
+  .sign-up-today { margin-left: 37px; }
+}
