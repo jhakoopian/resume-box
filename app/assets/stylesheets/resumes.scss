@@ -17,15 +17,29 @@
   transition: .2s;
 }
 
-.delete {
-  color: rgb(223, 111, 146);
-  border-color: rgb(223, 111, 146);
-}
-
 .button:hover {
   background-color: rgb(25, 123, 181);
   color: white;
   text-decoration: none;
+}
+
+.button:visited {
+  text-decoration: none;
+}
+
+.neutral {
+  color: rgb(100, 100, 100);
+  border-color: rgb(100, 100, 100);
+}
+
+.neutral:hover {
+  color: white;
+  background-color: rgb(100, 100, 100);
+}
+
+.delete {
+  color: rgb(223, 111, 146);
+  border-color: rgb(223, 111, 146);
 }
 
 .delete:hover {
@@ -37,7 +51,6 @@
   height: 22px;
 }
 
-.large {
+.wide {
   width: 115px;
-  margin-top: 2px;
 }

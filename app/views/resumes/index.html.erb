@@ -1,23 +1,15 @@
 <div class="container">
   <h1>Resumes</h1>
-  <%= link_to "Upload Resume", new_resume_path, class: 'button large' %>
+  <%= link_to "New Resume", new_resume_path, class: 'button wide' %>
+  <%= link_to "Back", :back, class: 'button neutral' %>
   <br>
   <% @resumes.each do |resume| %>
     <hr>
-      <h4><%= link_to resume.name, "#{resume.document}", target: ':_blank' %></h4>
-      <p><strong>File Name: </strong><%= resume.document_file_name %></p>
-      <p><strong>File Size: </strong><%= number_to_human_size(resume.document_file_size) %></p>
-      <p><strong>Last Modified: </strong>
-        <% if resume.updated_at > Time.now.beginning_of_day %>
-          <%= "#{time_ago_in_words(resume.updated_at)} ago" %>
-        <% else %>
-          <%= "on #{resume.updated_at.strftime("%b %d, %Y")}" %>
-        <% end %>
-      </p>
-        <%= link_to "Edit", edit_resume_path(resume), class: 'button' %>
-        <div class="button">Share</div>
-        <%= link_to "Delete", resume, method: :delete, class: 'button delete', data: { confirm: 'Are you sure you want to delete this topic?' } %>
-        <br>
+    <h3><%= resume.name %></h3>
+    <%= link_to "View", "#{resume.document}", target: ':_blank', class: 'button' %>
+    <%= link_to "Details", resume_path(resume), class: 'button' %>
+    <%= link_to "Send", new_resume_message_path(resume), class: 'button' %>
+    <br>
   <% end %>
   <br>
 </div>

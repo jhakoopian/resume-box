@@ -1,0 +1,16 @@
+<div class="container">
+  <h1>New Message</h1>
+  <%= link_to "Back", :back, class: 'button neutral' %>
+  <br>
+  <hr>
+  <%= form_for [@resume, @message] do |f| %>
+      <p><strong>Recipient</strong></p>
+      <%= f.text_field :recipient %>
+      <p><strong>Subject</strong></p>
+      <%= f.text_field :subject %>
+      <p><strong>Message</strong></p>
+      <%= f.text_area :body, size: "60x10" %>
+      <br>
+      <%= f.submit "Send", class: 'button save' %>
+  <% end %>
+</div>

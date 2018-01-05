@@ -1,0 +1,18 @@
+<div class="container">
+  <h1>Sent Messages</h1>
+  <%= link_to 'Back', resumes_path, class: 'button delete' %>
+  <br>
+  <% @messages.each do |message| %>
+    <hr>
+    <h4><%= message.subject %></h4>
+    <p><strong>To: </strong><%= message.recipient %></p>
+    <p><strong>Sent: </strong>
+      <% if message.created_at > Time.now.beginning_of_day %>
+        <%= "#{time_ago_in_words(message.created_at)} ago" %>
+      <% else %>
+        <%= "on #{message.created_at.strftime("%b %d, %Y")}" %>
+      <% end %>
+    </p>
+    <p><strong>Resume: </strong><%= message.resume %></p>
+  <% end %>
+</div>

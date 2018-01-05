@@ -22,7 +22,8 @@
 }
 
 @media (max-width: 375px) {
+  li { font-size: 12px; }
   .nav {
-    padding-right: 0px;
+    padding-right: 10px;
   }
 }
