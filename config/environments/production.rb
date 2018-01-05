@@ -88,7 +88,7 @@ Rails.application.configure do
     }
   }
 
-  config.action_mailer.default_url_options = { host: 'radiant-journey-75150.herokuapp.com' }
+  config.action_mailer.default_url_options = { host: 'https://radiant-journey-75150.herokuapp.com' }
   config.action_mailer.delivery_method = :smtp
 
   ActionMailer::Base.smtp_settings = {
