@@ -8,6 +8,6 @@ class Message < ActiveRecord::Base
 
   private
   def send_message
-    ShareResume.share_resume_email(self.user, self.recipient, self.subject, self.body, self.resume).deliver_now
+    ShareResume.share_resume_email(self.user.email, self.recipient, self.subject, self.body, self.resume).deliver_now
   end
 end
