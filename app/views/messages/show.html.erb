@@ -1,6 +1,5 @@
 <div class="container">
   <h1><%= @message.subject %></h1>
-  <%= link_to "Back", :back, class: 'button neutral' %>
   <br>
   <hr>
   <p><strong>To: </strong><%= @message.recipient %></p>
@@ -11,7 +10,15 @@
       <%= "on #{@message.created_at.strftime("%b %d, %Y")}" %>
     <% end %>
   </p>
-  <p><strong>Body: </strong></p>
-  <p><%= @message.body %></p>
+  <p><strong>Attatched Resume: </strong><%= @message.resume.name %></p>
+  <div class="parent">
+    <div class="child-one">
+      <p class="body"><strong>Body: </strong></p>
+    </div>
+    <div class="child-two">
+      <p><%= markdown @message.body %></p>
+    </div>
+  </div>
+  <hr>
   <%= link_to 'Delete', [@message.resume, @message], method: :delete, class: 'button delete', data: { confirm: 'Are you sure you want to delete this message? It will still appear in your inbox. Whomever you sent it to will still have it.' } %>
 </div>

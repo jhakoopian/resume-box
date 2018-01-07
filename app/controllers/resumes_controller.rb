@@ -32,7 +32,7 @@ class ResumesController < ApplicationController
 
     if @resume.update_attributes(resume_params)
       flash[:notice] = "Your resume was successfully updated."
-      redirect_to resumes_path
+      redirect_to resume_path
     else
       flash.now[:alert] = "#{@resume.errors.full_messages}"
       render :edit

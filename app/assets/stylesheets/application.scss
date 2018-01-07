@@ -17,13 +17,95 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.flash {
+  width: 600px;
+  margin: auto;
+  margin-top: 50px;
+}
+
 .nav {
   padding-right: 25px;
+}
+
+.border {
+  border: 1px solid rgb(200, 200, 200);
+  border-radius: 5px;
+}
+
+.button {
+  width: 52px;
+  height: 24px;
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 20px;
+  background-color: white;
+  float: left;
+  margin: 5px 5px 0px 0px;
+  cursor: pointer;
+  color: rgb(25, 123, 181);
+  border: 2px solid rgb(25, 123, 181);
+  transition: .2s;
+  padding-top: 1px;
+}
+
+.button:link {
+  color: rgb(25, 123, 181);
+  text-decoration: none;
+}
+
+.button:visited {
+  color: rgb(25, 123, 181);
+}
+
+.button:hover {
+  background-color: rgb(25, 123, 181);
+  color: white;
+}
+
+.medium {
+    width: 60px;
+}
+
+.large {
+  width: 115px;
+}
+
+.extra-large {
+  width: 150px;
+}
+
+.parent {
+  width: 500px;
+}
+
+.child-one {
+  display: inline-block;
+  width: 50px;
+  // height: 100px;
+  vertical-align: top;
+}
+
+.child-two {
+  display: inline-block;
+  width: 400px;
+  // height: 100px;
+  margin-top: -9px;
 }
 
 @media (max-width: 375px) {
   li { font-size: 12px; }
   .nav {
     padding-right: 10px;
+  }
+  .flash {
+    width: 350px;
+    margin: auto;
+    margin-top: 20px;
+  }
+  .child-two {
+    display: inline-block;
+    width: 250px;
+    margin-top: -9px;
   }
 }

@@ -1,19 +1,27 @@
 <div class="container">
   <h1>Edit Resume</h1>
   <br>
-  <p><strong>Resume Name: </strong><%= @resume.name %></p>
-  <p><strong>Attached File: </strong><%= @resume.document_file_name %></p>
-  <br>
-  <%= form_for(@resume, multipart: true) do |f| %>
-    <p><strong>New Resume Name</strong></p>
-    <%= f.text_field :name, class: 'col-md-3 col-xs-12' %>
+  <hr>
+  <div class="container">
+    <div class="row">
+      <p><strong>Resume Name: </strong><%= @resume.name %></p>
+      <p><strong>Attached File: </strong><%= @resume.document_file_name %></p>
+    </div>
     <br>
-    <br>
-    <br>
-    <p><strong>Replace Attached File</strong></p>
-    <%= f.file_field :document %>
-    <br>
-    <%= f.submit "Save", class: 'button save' %>
-    <%= link_to "Cancel", resume_path(@resume), class: 'button neutral' %>
-  <% end %>
+    <%= form_for(@resume, multipart: true) do |f| %>
+      <div class="row">
+        <p><strong>Edit Resume Name</strong></p>
+        <%= f.text_field :name, class: 'border col-md-3 col-sm-4 col-xs-8' %>
+      </div>
+      <br>
+      <div class="row">
+        <p><strong>Replace Attached File</strong></p>
+        <%= f.file_field :document %>
+      </div>
+      <br>
+      <div class="row">
+        <%= f.submit "Save", class: 'button' %>
+      </div>
+    <% end %>
+  </div>
 </div>

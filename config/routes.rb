@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     resources :messages
   end
 
-  resources :messages
+  resources :messages, only: [:index]
 
   authenticated :user do
     root 'resumes#index', as: :authenticated_root

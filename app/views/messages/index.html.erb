@@ -1,6 +1,5 @@
 <div class="container">
-  <h1>Sent Messages</h1>
-  <%= link_to "Back", :back, class: 'button neutral' %>
+  <h1>Messages</h1>
   <br>
   <% @messages.each do |message| %>
     <hr>
@@ -13,8 +12,8 @@
         <%= "on #{message.created_at.strftime("%b %d, %Y")}" %>
       <% end %>
     </p>
-    <p><strong>Attatched Resume: </strong><%= link_to message.resume.name, resume_path(message.resume) %></p>
-    <%= link_to 'Details', resume_message_path(message.resume, message), class: 'button' %>
+    <p><strong>Attatched Resume: </strong><%= message.resume.name %></p>
+    <%= link_to 'View Message', resume_message_path(message.resume, message), class: 'button large' %>
     <br>
   <% end %>
 </div>
