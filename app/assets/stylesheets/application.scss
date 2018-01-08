@@ -56,6 +56,7 @@
 
 .button:visited {
   color: rgb(25, 123, 181);
+  background-color: white;
 }
 
 .button:hover {
@@ -95,14 +96,14 @@
 
 @media (max-width: 375px) {
   li { font-size: 12px; }
-  .nav {
-    padding-right: 10px;
-  }
+  .nav { padding-right: 5px; }
+  .user-signed-in-padding-right { padding-right: 5px; }
   .flash {
     width: 350px;
     margin: auto;
     margin-top: 20px;
   }
+  .medium { width: 70px; }
   .child-two {
     display: inline-block;
     width: 250px;
