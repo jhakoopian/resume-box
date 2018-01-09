@@ -1,4 +1,14 @@
 <div class="container">
+  <% if @message.errors.any? %>
+    <div class="flash alert alert-warning">
+      <h4><%= pluralize(@message.errors.count, "Error") %>:</h4>
+      <ul>
+        <% @message.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
   <h1>New Message</h1>
   <br>
   <hr>
@@ -14,12 +24,13 @@
       </div>
       <div class="row">
         <p><strong>Message</strong></p>
-        <%= f.text_area :body, size: "43x10", class: 'border' %>
+        <%= f.text_area :body, size: "39x10", class: 'border' %>
       </div>
       <br>
       <div class="row">
-        <%= f.submit "Send", class: 'button save' %>
+        <%= f.submit "Send", class: 'button send' %>
       </div>
     <% end %>
   </div>
 </div>
+<br>

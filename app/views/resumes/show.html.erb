@@ -4,14 +4,13 @@
   <hr>
   <p><strong>Attached File: </strong><%= @resume.document_file_name %></p>
   <p><strong>File Size: </strong><%= number_to_human_size(@resume.document_file_size) %></p>
-  <p><strong>Last Modified: </strong>
+  <p class="resume-show-bottom-p-padding-bottom"><strong>Last Modified: </strong>
     <% if @resume.updated_at > Time.now.beginning_of_day %>
       <%= "#{time_ago_in_words(@resume.updated_at)} ago" %>
     <% else %>
       <%= "on #{@resume.updated_at.strftime("%b %d, %Y")}" %>
     <% end %>
   </p>
-  <br>
   <hr>
     <%= link_to "View", "#{@resume.document}", target: ':_blank', class: 'button' %>
     <%= link_to "Edit", edit_resume_path(@resume), class: 'button' %>

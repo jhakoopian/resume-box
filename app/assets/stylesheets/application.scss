@@ -20,7 +20,7 @@
 .flash {
   width: 600px;
   margin: auto;
-  margin-top: 50px;
+  margin-top: 25px;
 }
 
 .nav {
@@ -64,6 +64,11 @@
   color: white;
 }
 
+.button:active {
+  background-color: rgb(25, 123, 181);
+  color: white;
+}
+
 .medium {
     width: 60px;
 }
@@ -74,6 +79,10 @@
 
 .extra-large {
   width: 150px;
+}
+
+.resume-show-bottom-p-padding-bottom {
+  padding-bottom: 10px;
 }
 
 .parent {
@@ -96,17 +105,21 @@
 
 @media (max-width: 375px) {
   li { font-size: 12px; }
-  .nav { padding-right: 5px; }
-  .user-signed-in-padding-right { padding-right: 5px; }
+  .nav { padding-right: 0px; }
   .flash {
     width: 350px;
     margin: auto;
     margin-top: 20px;
   }
   .medium { width: 70px; }
+  .parent { width: 345px; }
   .child-two {
-    display: inline-block;
     width: 250px;
     margin-top: -9px;
   }
+  .button:hover {
+    background-color: white;
+    color: rgb(25, 123, 181);
+  }
+  .send { padding-right: 7px; }
 }

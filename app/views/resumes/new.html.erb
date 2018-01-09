@@ -1,4 +1,14 @@
 <div class="container">
+  <% if @resume.errors.any? %>
+    <div class="flash alert alert-warning">
+      <h4><%= pluralize(@resume.errors.count, "Error") %>:</h4>
+      <ul>
+        <% @resume.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
   <h1>New Resume</h1>
   <br>
   <hr>
@@ -11,6 +21,7 @@
       <br>
       <div class="row">
         <p><strong>Attached File</strong></p>
+        <p>(Only .pdf, .doc, and .docx files are permitted.)</p>
         <%= f.file_field :document %>
       </div>
       <br>

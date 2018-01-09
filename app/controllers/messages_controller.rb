@@ -18,7 +18,6 @@ class MessagesController < ApplicationController
       flash[:notice] = "Your message was successfully sent."
       redirect_to resume_messages_path
     else
-      flash.now[:alert] = "There was an error sending your resume. Please try again."
       render :new
     end
   end
@@ -28,10 +27,9 @@ class MessagesController < ApplicationController
 
   def destroy
     if @message.destroy
-      flash[:notice] = "\"#{@message.subject}\" was deleted successfully."
+      flash[:notice] = "Your message was deleted successfully."
       redirect_to resume_messages_path
     else
-      flash.now[:alert] = "There was an error deleting your message."
       render :show
     end
   end

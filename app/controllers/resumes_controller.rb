@@ -19,7 +19,6 @@ class ResumesController < ApplicationController
       flash[:notice] = "Your resume was successfully uoloaded."
       redirect_to resumes_path
     else
-      flash.now[:alert] = "There was an error uploading your resume. Please try again."
       render :new
     end
   end
@@ -34,17 +33,15 @@ class ResumesController < ApplicationController
       flash[:notice] = "Your resume was successfully updated."
       redirect_to resume_path
     else
-      flash.now[:alert] = "#{@resume.errors.full_messages}"
       render :edit
     end
   end
 
   def destroy
     if @resume.destroy
-      flash[:notice] = "\"#{@resume.name}\" was deleted successfully."
+      flash[:notice] = "Your resume was deleted successfully."
       redirect_to resumes_path
     else
-      flash.now[:alert] = "There was an error deleting the resume."
       render :show
     end
   end
