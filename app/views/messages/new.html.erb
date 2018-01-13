@@ -24,9 +24,13 @@
       </div>
       <div class="row">
         <p><strong>Message</strong></p>
-        <%= f.text_area :body, size: "39x10", class: 'border' %>
+        <%= f.text_area :body, size: "45x10", class: 'border text-area' %>
       </div>
       <br>
+      <div class="row">
+        <p class="note">The following text and link will be placed beneath your message:</p>
+        <p class="note">"Please click <%= link_to "here", "#{@resume.document}", target: ':_blank' %> to view my resume."</p>
+      </div>
       <div class="row">
         <%= f.submit "Send", class: 'button send' %>
       </div>

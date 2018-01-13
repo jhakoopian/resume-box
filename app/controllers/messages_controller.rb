@@ -1,6 +1,7 @@
 class MessagesController < ApplicationController
   before_action :set_resume, except: [:index]
   before_action :set_message, only: [:show, :destroy]
+  rescue_from ActiveRecord::RecordNotFound, with: :record_not_found
 
   def index
     @messages = current_user.messages
@@ -45,5 +46,9 @@ class MessagesController < ApplicationController
 
   def set_message
     @message = Message.find(params[:id])
+  end
+
+  def record_not_found
+    redirect_to messages_path
   end
 end

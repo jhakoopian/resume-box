@@ -2,7 +2,7 @@ class Resume < ActiveRecord::Base
   has_attached_file :document
 
   belongs_to :user
-  has_many :messages
+  has_many :messages, dependent: :destroy
 
   validates :name, presence: true
   validates_attachment :document,

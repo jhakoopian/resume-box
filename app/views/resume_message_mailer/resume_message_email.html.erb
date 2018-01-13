@@ -6,8 +6,8 @@
       /* Email styles need to be inline */
     </style>
   </head>
-
   <body>
-    <%= yield %>
+    <p><%= @body %></p>
+    <p>Please click <%= link_to "here", "#{@resume}" %> to view my resume.</p>
   </body>
 </html>

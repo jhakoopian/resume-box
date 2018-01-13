@@ -1,5 +1,6 @@
 class ResumesController < ApplicationController
   before_action :set_resume, only: [:show, :edit, :update, :destroy]
+  rescue_from ActiveRecord::RecordNotFound, with: :record_not_found
 
   def index
     @resumes = current_user.resumes
@@ -53,5 +54,9 @@ class ResumesController < ApplicationController
 
   def set_resume
     @resume = Resume.find(params[:id])
+  end
+
+  def record_not_found
+    redirect_to resumes_path
   end
 end

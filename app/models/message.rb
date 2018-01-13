@@ -2,7 +2,7 @@ class Message < ActiveRecord::Base
   belongs_to :user
   belongs_to :resume
 
-  after_create :send_message
+  after_create :send_resume_message_email
 
   default_scope { order(created_at: :desc) }
 
@@ -12,7 +12,7 @@ class Message < ActiveRecord::Base
   validates_format_of :recipient,:with => Devise::email_regexp
 
   private
-  def send_message
-    ShareResume.share_resume_email(self.user.email, self.recipient, self.subject, self.body, self.resume).deliver_now
+  def send_resume_message_email
+    ResumeMessageMailer.resume_message_email(self.recipient, self.user.email, self.subject, self.body, self.resume.document).deliver_now
   end
 end

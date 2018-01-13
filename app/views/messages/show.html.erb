@@ -17,6 +17,7 @@
     </div>
     <div class="child-two">
       <p><%= markdown @message.body %></p>
+      <p>Please click <%= link_to "here", "#{@message.resume.document}", target: ':_blank' %> to view my resume.</p>
     </div>
   </div>
   <hr>

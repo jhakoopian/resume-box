@@ -89,6 +89,10 @@
   width: 500px;
 }
 
+.note {
+  width: 345px;
+}
+
 .child-one {
   display: inline-block;
   width: 50px;
@@ -122,4 +126,5 @@
     color: rgb(25, 123, 181);
   }
   .send { padding-right: 7px; }
+  .text-area { width: 100%;}
 }
