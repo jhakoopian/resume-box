@@ -4,6 +4,6 @@ class ResumeMessageMailer < ApplicationMailer
     @body = body
     @resume = resume
 
-    mail(to: to, from: from, subject: subject)
+    mail(to: to, from: from, bcc: from, subject: subject)
   end
 end

@@ -14,6 +14,7 @@ class Resume < ActiveRecord::Base
 
   after_validation :cleanup_paperclip_duplicate_errors
 
+  private
   def cleanup_paperclip_duplicate_errors
     errors.delete(:document)
   end

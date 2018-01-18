@@ -13,6 +13,6 @@ class Message < ActiveRecord::Base
 
   private
   def send_resume_message_email
-    ResumeMessageMailer.resume_message_email(self.recipient, self.user.email, self.subject, self.body, self.resume.document).deliver_now
+    ResumeMessageMailer.resume_message_email(self.recipient, self.resume.user.email, self.subject, self.body, self.resume.document).deliver_now
   end
 end
