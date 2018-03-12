@@ -14,7 +14,7 @@
       </div>
       <br>
       <div class="row">
-        <%= f.label :"new password" %>
+        <%= f.label :"new_password" %>
         <% if @minimum_password_length %>
         <em>(<%= @minimum_password_length %> character minimum)</em>
         <% end %><br />
@@ -34,9 +34,9 @@
       <div class="row">
         <%= f.submit "Update", class: "button medium" %>
       </div>
-      <div class="row">
-        <%= button_to "Cancel My Account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "button extra-large" %></p>
-      </div>
     <% end %>
+    <div class="row">
+      <%= button_to "Cancel My Account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "button extra-large" %></p>
+    </div>
   </div>
 </div>
